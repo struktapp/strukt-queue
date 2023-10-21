@@ -1,0 +1,25 @@
+{
+    "name": "strukt/queue",
+    "description": "Memcached Queue",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-0": {
+            "Strukt\\": "src/"
+        },
+        "files":["src/helpers.php"]
+    },
+    "authors": [
+        {
+            "name": "pitsolu",
+            "email": "pitsolu@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+
+        "php":"^8.1",
+        "strukt/commons": "v1.1.0-alpha",
+        "ext-memcached":"*"
+    }
+}
