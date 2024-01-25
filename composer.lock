@@ -4,24 +4,68 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a80667a57587554db20ea071d6bf7147",
+    "content-hash": "03492b5458db50339956a1856bc88c41",
     "packages": [
         {
-            "name": "strukt/commons",
-            "version": "v1.1.0-alpha",
+            "name": "strukt/base",
+            "version": "v1.0.0-alpha",
             "source": {
                 "type": "git",
-                "url": "https://github.com/samweru/strukt-commons.git",
-                "reference": "9a9e4ae4a4e75a483aa1a340739a0587dc7acdcc"
+                "url": "https://github.com/samweru/strukt-base.git",
+                "reference": "5592ddfded8f17d5f8adc3fd19249918e9398d78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samweru/strukt-commons/zipball/9a9e4ae4a4e75a483aa1a340739a0587dc7acdcc",
-                "reference": "9a9e4ae4a4e75a483aa1a340739a0587dc7acdcc",
+                "url": "https://api.github.com/repos/samweru/strukt-base/zipball/5592ddfded8f17d5f8adc3fd19249918e9398d78",
+                "reference": "5592ddfded8f17d5f8adc3fd19249918e9398d78",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-0": {
+                    "Strukt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moderator",
+                    "email": "pitsolu@gmail.com"
+                }
+            ],
+            "description": "Base Functionality",
+            "support": {
+                "issues": "https://github.com/samweru/strukt-base/issues",
+                "source": "https://github.com/samweru/strukt-base/tree/v1.0.0-alpha"
+            },
+            "time": "2024-01-25T01:50:53+00:00"
+        },
+        {
+            "name": "strukt/commons",
+            "version": "v1.1.1-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samweru/strukt-commons.git",
+                "reference": "2cecab48dad0a33289c031c93781fd7a31453545"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samweru/strukt-commons/zipball/2cecab48dad0a33289c031c93781fd7a31453545",
+                "reference": "2cecab48dad0a33289c031c93781fd7a31453545",
                 "shasum": ""
             },
             "require": {
                 "php": "^8.1",
+                "strukt/fs": "1.1.0",
                 "strukt/math": "v1.1.0-alpha",
                 "symfony/var-dumper": "6.4.x-dev"
             },
@@ -47,9 +91,9 @@
             "description": "Strukt Common Utilities",
             "support": {
                 "issues": "https://github.com/samweru/strukt-commons/issues",
-                "source": "https://github.com/samweru/strukt-commons/tree/v1.1.0-alpha"
+                "source": "https://github.com/samweru/strukt-commons/tree/v1.1.1-alpha"
             },
-            "time": "2023-10-03T14:38:29+00:00"
+            "time": "2024-01-25T02:06:39+00:00"
         },
         {
             "name": "strukt/event",
@@ -57,16 +101,17 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/samweru/strukt-event.git",
-                "reference": "f106cbbb9779c0502699760f234524c52ae2090c"
+                "reference": "df123fee247059cecc4cdacafabc1a8576bf01f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samweru/strukt-event/zipball/f106cbbb9779c0502699760f234524c52ae2090c",
-                "reference": "f106cbbb9779c0502699760f234524c52ae2090c",
+                "url": "https://api.github.com/repos/samweru/strukt-event/zipball/df123fee247059cecc4cdacafabc1a8576bf01f3",
+                "reference": "df123fee247059cecc4cdacafabc1a8576bf01f3",
                 "shasum": ""
             },
             "require": {
-                "php": "^8.1"
+                "php": "^8.1",
+                "strukt/base": "v1.0.0-alpha"
             },
             "type": "package",
             "autoload": {
@@ -92,7 +137,54 @@
                 "issues": "https://github.com/samweru/strukt-event/issues",
                 "source": "https://github.com/samweru/strukt-event/tree/v1.1.0"
             },
-            "time": "2023-10-09T12:39:19+00:00"
+            "time": "2024-01-25T01:59:37+00:00"
+        },
+        {
+            "name": "strukt/fs",
+            "version": "v1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samweru/strukt-fs.git",
+                "reference": "47279524ed506dcceda29758269453d24fc095fb"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samweru/strukt-fs/zipball/47279524ed506dcceda29758269453d24fc095fb",
+                "reference": "47279524ed506dcceda29758269453d24fc095fb",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^8.1",
+                "strukt/base": "v1.0.0-alpha"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/helpers.php"
+                ],
+                "psr-0": {
+                    "Strukt\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Moderator",
+                    "email": "pitsolu@gmail.com"
+                }
+            ],
+            "description": "Strukt Filesystem",
+            "support": {
+                "issues": "https://github.com/samweru/strukt-fs/issues",
+                "source": "https://github.com/samweru/strukt-fs/tree/v1.1.0"
+            },
+            "time": "2024-01-25T02:09:44+00:00"
         },
         {
             "name": "strukt/math",
@@ -100,12 +192,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/samweru/strukt-math.git",
-                "reference": "10f4370e7f47a187a534db1502e14995ffdb5f5d"
+                "reference": "4a0f7ad7326e3a496e7b99f00ebf3496f22486d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/samweru/strukt-math/zipball/10f4370e7f47a187a534db1502e14995ffdb5f5d",
-                "reference": "10f4370e7f47a187a534db1502e14995ffdb5f5d",
+                "url": "https://api.github.com/repos/samweru/strukt-math/zipball/4a0f7ad7326e3a496e7b99f00ebf3496f22486d5",
+                "reference": "4a0f7ad7326e3a496e7b99f00ebf3496f22486d5",
                 "shasum": ""
             },
             "require": {
@@ -136,7 +228,7 @@
                 "issues": "https://github.com/samweru/strukt-math/issues",
                 "source": "https://github.com/samweru/strukt-math/tree/v1.1.0-alpha"
             },
-            "time": "2023-09-18T12:37:48+00:00"
+            "time": "2024-01-25T02:03:09+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -144,12 +236,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf"
+                "reference": "2c438b99bb2753c1628c1e6f523991edea5b03a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/7c3aff79d10325257a001fcf92d991f24fc967cf",
-                "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/2c438b99bb2753c1628c1e6f523991edea5b03a4",
+                "reference": "2c438b99bb2753c1628c1e6f523991edea5b03a4",
                 "shasum": ""
             },
             "require": {
@@ -159,7 +251,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "3.4-dev"
+                    "dev-main": "3.5-dev"
                 },
                 "thanks": {
                     "name": "symfony/contracts",
@@ -188,7 +280,7 @@
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.3.0"
+                "source": "https://github.com/symfony/deprecation-contracts/tree/main"
             },
             "funding": [
                 {
@@ -204,7 +296,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-05-23T14:45:45+00:00"
+            "time": "2024-01-02T14:07:37+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -296,12 +388,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "86901b12011e790bdc7bc8fb934f2ca8e22981ef"
+                "reference": "0435a08f69125535336177c29d56af3abc1f69da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/86901b12011e790bdc7bc8fb934f2ca8e22981ef",
-                "reference": "86901b12011e790bdc7bc8fb934f2ca8e22981ef",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/0435a08f69125535336177c29d56af3abc1f69da",
+                "reference": "0435a08f69125535336177c29d56af3abc1f69da",
                 "shasum": ""
             },
             "require": {
@@ -373,7 +465,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-10-18T09:43:34+00:00"
+            "time": "2024-01-23T14:53:30+00:00"
         }
     ],
     "packages-dev": [],

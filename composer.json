@@ -19,7 +19,7 @@
     "require": {
 
         "php":"^8.1",
-        "strukt/commons": "v1.1.0-alpha",
+        "strukt/commons": "v1.1.1-alpha",
         "ext-memcached":"*"
     }
 }
