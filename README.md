@@ -1,4 +1,3 @@
-
 Strukt Queue
 ===
 
@@ -7,11 +6,14 @@ that uses Memcached https://memcached.org/
 as backend
  
 Needs PHP Memcached extensions installed to work properly
- 
-~~~
-@author Maurizio Giunti https://www.mauriziogiunti.it / https://codeguru.it
-@license MIT
-~~~
+
+### Requirements
+
+```sh
+sudo apt install memcached
+sudo apt install php-memcached
+sudo apt install libmemcached-tools # cli tools
+```
 
 ## Usage
 
@@ -63,3 +65,10 @@ print_r(array(
 	"udata"=>$udata
 ));
 ```
+
+## Credits
+
+~~~
+@author Maurizio Giunti https://www.mauriziogiunti.it / https://codeguru.it
+@license MIT
+~~~
