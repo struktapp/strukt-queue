@@ -6,9 +6,9 @@
     "require": {
         "php": ">=8.2",
         "ext-memcached": "*",
-        "strukt/base": "v1.0.0",
+        "strukt/base": "v1.1.0",
         "strukt/console": "v2.0.0",
-        "strukt/process": "v1.0.0"
+        "strukt/process": "v2.0.0"
     },
     "require-dev": {
         "pestphp/pest": "^4.0"
